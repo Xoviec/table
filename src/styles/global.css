@@ -1,0 +1,103 @@
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse; 
+}
+
+thead{
+    color: white;
+    height: 3rem;
+    background-color: #002954;
+    border: 1px solid #002954;
+    margin: 0;
+    border-spacing: 0;
+}
+
+tr{
+    border-spacing: 0;
+    height: 3rem;
+    border-top: none;
+    border: 1px solid #b9dbe3;
+}
+
+thead tr{
+    border: none;
+}
+
+
+
+
+th{
+    border-spacing: 0px;
+}
+
+tbody tr:nth-child(even){
+    background-color: #e6f4f7;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #eef8f9;
+}
+
+tbody tr{
+    background-color: #202020;
+}
+
+.table-name{
+    text-align: left;
+    padding-left: 1rem;
+    width: 12rem;
+}
+
+.table-cash{
+    text-align: right;
+    width: 10rem;
+}
+
+.table-account-type{
+    width: 15rem;
+    text-align: left;
+    padding-left: 5rem;
+}
+
+.color-profit{
+    color: #279d23;
+}
+
+.color-loss{
+    color: #dc3545;
+}
+
+
+  @media (prefers-color-scheme: dark){
+
+    body{
+        background-color: rgb(37, 37, 37);
+    }
+
+    table{
+        color: white;
+    }
+
+
+    tbody tr:nth-child(even){
+        background-color: #000c19;
+    }
+
+    tbody tr:nth-child(odd){
+        background-color: #000811;
+    }
+
+    tr{
+        border: 1px solid #002954;
+    }
+
+
+}
+
+
+
+.react-loading-skeleton {
+    --base-color: #b43a3a;
+    --highlight-color: #47a530;
+}
