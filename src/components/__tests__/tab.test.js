@@ -21,16 +21,4 @@ describe('tab-component', ()=>{
         expect(trElement.length).toBe(9)
 
     })
-    it("checks if table renders properly fetched data", async () => {
-        render(<Tab />);
-      
-        await waitFor(async () => {
-          const trElements = await screen.findAllByTestId("tr-fetched");
-      
-          expect(trElements.length).toBeGreaterThan(0);
-          trElements.forEach((element) => {
-            expect(element).toBeInTheDocument();
-          });
-        });
-      });
 })

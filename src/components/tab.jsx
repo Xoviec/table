@@ -16,12 +16,25 @@ const headers = {
   };
 
 
+// useEffect(()=>{
+//     axios.get('http://localhost:8000/accounts' )
+//     .then(response => {
+//         console.log(response)
+//         const accountsData = response.data;
+//         setAccountsData(accountsData)
+//     })
+//     .catch(error => {
+//         console.error(error);
+//     });
+// }, [])
+
+
 useEffect(()=>{
 
 
-    axios.get('https://recruitmentdb-508d.restdb.io/rest/accounts', { headers })
+    axios.get('http://localhost:8000/accounts')
     .then(response => {
-        
+        console.log(response)
         const accountsData = response.data;
         setAccountsData(accountsData)
     })
@@ -30,7 +43,7 @@ useEffect(()=>{
     });
 
 
-  axios.get('https://recruitmentdb-508d.restdb.io/rest/accounttypes', { headers })
+  axios.get('http://localhost:8000/accounttypes')
     .then(response => {
         const accountTypesData = response.data;
         setAccountsTypesData(accountTypesData)
