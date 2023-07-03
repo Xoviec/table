@@ -16,25 +16,11 @@ const headers = {
   };
 
 
-// useEffect(()=>{
-//     axios.get('http://localhost:8000/accounts' )
-//     .then(response => {
-//         console.log(response)
-//         const accountsData = response.data;
-//         setAccountsData(accountsData)
-//     })
-//     .catch(error => {
-//         console.error(error);
-//     });
-// }, [])
-
-
 useEffect(()=>{
 
 
     axios.get('http://localhost:8000/accounts')
     .then(response => {
-        console.log(response)
         const accountsData = response.data;
         setAccountsData(accountsData)
     })
@@ -56,17 +42,8 @@ useEffect(()=>{
 
 
 
-
-
-
-    console.log(accountsData)
-
-    console.log(accountTypesData)
-
-
     return(
         <div data-testid='tab-component'>
-            
             <table>
                 <thead>
                     <tr >
