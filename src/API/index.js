@@ -13,9 +13,6 @@ const headers = {
   };
 
 
-app.get('/', (req, res) =>{
-    res.json(`e`)
-})
 
 app.get('/accounts', (req, res) =>{
     axios.get('https://recruitmentdb-508d.restdb.io/rest/accounts', { headers })
@@ -31,18 +28,12 @@ app.get('/accounts', (req, res) =>{
 app.get('/accounttypes', (req, res) =>{
     axios.get('https://recruitmentdb-508d.restdb.io/rest/accounttypes', { headers })
     .then(response => {
-        
-        const accountsData = response.data;
-        res.json(accountsData)
+        res.json(response.data)
     })
     .catch(error => {
         console.error(error);
     });
 })
-    
 
 
-
-
-
-app.listen(8000, ()=> console.log('working'))
+app.listen(PORT, ()=> console.log('working'))
